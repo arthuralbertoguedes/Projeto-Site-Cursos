@@ -1,0 +1,152 @@
+/*===RESETS*/
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Bree Serif', serif;}
+html,body{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+p{
+    font-family: gridge;
+    
+}
+.sombraContainer{
+    box-shadow: 1px 1px 5px black;
+}
+
+@font-face{
+    font-family: gridge;
+    src: url("/fonts/Gridget.otf");
+    
+}
+
+/*CABEÇALHO e NAVBARS*/
+header{
+    background: url("../images/bg-header-sm.jpg") bottom left no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.divCabecalho{
+    padding: 4%;
+    background-color: white;
+    width: 70%;
+    margin: 5%;
+    border-radius: 15px;
+    box-shadow: 2px 3px 10px black;
+}
+.itemDivCabecalho{
+    font-weight: 900;
+}
+.itemDivCabecalho:before{
+    content: '✔';
+    margin-right: 5px;
+    color: green;
+}
+
+
+
+.videoSite iframe{
+    width: 100%;
+    max-width: 650px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/*===Catálogo de cursos===*/
+.listaPersonalizada{
+    list-style: none;
+}
+
+.cursoCategoria{
+    cursor: pointer;
+    font-size: 95%;
+}
+.cursoCategoria:after{
+    content: url("../images/seta-baixo.png");
+    height: 15px;
+    width: 15px;
+    margin-left: 10px;
+}
+
+.cursos{
+    font-size: 105%;
+}
+.listaCursos{
+    display: none;
+}
+.listaCursos-visivel{
+    display: block;
+}
+.linksPersonalizados{
+    text-decoration: none;
+    margin: 25px;
+}
+
+
+/*===Footer===*/
+.linkSocialMedias{
+    margin-bottom: -10px;
+    
+}
+.linkSocialMedias:before{
+   content: '>>';
+   margin-right: 5px;
+   margin-left: -15px;
+}
+@media (min-width: 600px){
+   
+    .divCabecalho{
+        width: 40%;
+    }
+    
+}
+
+@media (min-width: 768px){
+    header{
+        background: url("../images/bg-header-md.jpg") top left no-repeat;
+        background-size: 100%;
+    }
+    .divCabecalho{
+        width: 30%;
+        padding: 2%;
+    }
+    
+}
+
+
+
+/*Animações*/
+
+
+.linkAnimation{
+    animation: animateLink 4s;
+}
+#animatedElement{
+    position: relative;
+}
+
+.titleAnimation{
+    color: orange;
+}   
+@keyframes animateLink{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes animateTitle{
+    0%{
+        left: -1000px;
+        opacity: 0;
+    }
+    
+    100%{
+        left: 0px;
+        opacity: 1;
+    }
+}
